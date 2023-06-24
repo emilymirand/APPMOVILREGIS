@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCedula"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="270dp"
+        android:text="Cédula:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/TxtCedula"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCedula"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-28dp"
+        android:layout_marginEnd="25dp"
+        android:inputType="number"
+        android:maxLength="10" />
+
+    <TextView
+        android:id="@+id/tvNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtCedula"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="41dp"
+        android:text="Nombres:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtNombres"
+        android:layout_width="219dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/tvNombres"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-33dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="textCapCharacters"
+        android:maxEms="500"
+        android:maxLength="500"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/tvFechaNacimiento"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNombres"
+        android:layout_marginTop="16dp"
+        android:text="Fecha Nacimiento:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtFechaNacimiento"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFechaNacimiento"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-39dp"
+        android:layout_marginEnd="4dp"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/tvCiudad"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFechaNacimiento"
+        android:layout_marginTop="16dp"
+        android:text="Ciudad:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtCiudad"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCiudad"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-32dp"
+        android:layout_marginEnd="36dp"
+        android:inputType="textCapCharacters"
+        android:maxEms="200"
+        android:maxLength="200"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/tvGenero"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCiudad"
+        android:layout_marginTop="16dp"
+        android:text="Género:"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGenero"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvGenero"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-32dp"
+        android:layout_marginEnd="36dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+
+        <RadioButton
+            android:id="@+id/radioButtonOtro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otro" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupGenero"
+        android:layout_marginTop="16dp"
+        android:text="Correo:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtCorreo"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCorreo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-32dp"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCorreo"
+        android:layout_marginTop="16dp"
+        android:text="Teléfono:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtTelefono"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTelefono"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-33dp"
+        android:layout_marginEnd="12dp"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btEnviar"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTelefono"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="32dp"
+        android:text="Enviar" />
+
+    <Button
+        android:id="@+id/btLimpiar"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTelefono"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toStartOf="@id/btEnviar"
+        android:text="Limpiar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFEB3B"
+        android:text="INGRESO DE DATOS "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
