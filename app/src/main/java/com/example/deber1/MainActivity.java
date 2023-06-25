@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText txtCedula, txtNombres, txtFechaNacimiento, txtCiudad, txtCorreo, txtTelefono;
     private RadioGroup radioGroupGenero;
-    private Button btnEnviar, btnLimpiar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +28,18 @@ public class MainActivity extends AppCompatActivity {
         radioGroupGenero = findViewById(R.id.radioGroupGenero);
         txtCorreo = findViewById(R.id.txtCorreo);
         txtTelefono = findViewById(R.id.txtTelefono);
-        btnEnviar = findViewById(R.id.btEnviar);
-        btnLimpiar = findViewById(R.id.btLimpiar);
-
-        btnEnviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                enviarDatos();
-            }
-        });
-
-        btnLimpiar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                limpiarFormulario();
-            }
-        });
     }
+   public void btLimpiar (View view){
+       txtCedula.setText("");
+       txtNombres.setText("");
+       txtFechaNacimiento.setText("");
+       txtCiudad.setText("");
+       radioGroupGenero.clearCheck();
+       txtCorreo.setText("");
+       txtTelefono.setText("");
 
-    private void enviarDatos() {
+   }
+    public void btEnviar (View view){
         String cedula = txtCedula.getText().toString();
         String nombres = txtNombres.getText().toString();
         String fechaNacimiento = txtFechaNacimiento.getText().toString();
@@ -62,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("ciudad", ciudad);
         intent.putExtra("genero", genero);
         intent.putExtra("correo", correo);
-        intent.putExtra("telefono", telefono);
+        intent.putExtra("Telefono", telefono);
         startActivity(intent);
     }
 
@@ -72,13 +65,4 @@ public class MainActivity extends AppCompatActivity {
         return radioButton.getText().toString();
     }
 
-    private void limpiarFormulario() {
-        txtCedula.setText("");
-        txtNombres.setText("");
-        txtFechaNacimiento.setText("");
-        txtCiudad.setText("");
-        radioGroupGenero.clearCheck();
-        txtCorreo.setText("");
-        txtTelefono.setText("");
-    }
 }

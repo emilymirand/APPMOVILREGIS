@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/tvCedula"
-        android:layout_width="136dp"
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="47dp"
-        android:layout_marginEnd="270dp"
+        android:layout_marginEnd="282dp"
         android:text="Cédula:"
         android:textSize="18sp" />
 
@@ -29,22 +29,22 @@
 
     <TextView
         android:id="@+id/tvNombres"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/TxtCedula"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:text="Nombres:"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/txtNombres"
-        android:layout_width="219dp"
-        android:layout_height="57dp"
+        android:layout_width="189dp"
+        android:layout_height="60dp"
         android:layout_below="@id/tvNombres"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-33dp"
+        android:layout_marginTop="-39dp"
         android:layout_marginEnd="16dp"
         android:inputType="textCapCharacters"
         android:maxEms="500"
@@ -107,8 +107,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvGenero"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-32dp"
-        android:layout_marginEnd="36dp">
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-34dp"
+        android:layout_marginEnd="26dp">
 
         <RadioButton
             android:id="@+id/radioButtonMasculino"
@@ -122,11 +123,6 @@
             android:layout_height="wrap_content"
             android:text="Femenino" />
 
-        <RadioButton
-            android:id="@+id/radioButtonOtro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Otro" />
     </RadioGroup>
 
     <TextView
@@ -174,6 +170,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="43dp"
         android:layout_marginEnd="32dp"
+        android:onClick="btEnviar"
         android:text="Enviar" />
 
     <Button
@@ -184,6 +181,7 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="50dp"
         android:layout_toStartOf="@id/btEnviar"
+        android:onClick="btLimpiar"
         android:text="Limpiar" />
 
     <TextView

@@ -25,7 +25,7 @@ public class DatosIngresadosActivity extends AppCompatActivity {
         String ciudad = intent.getStringExtra("ciudad");
         String genero = intent.getStringExtra("genero");
         String correo = intent.getStringExtra("correo");
-        String telefono = intent.getStringExtra("telefono");
+        String telefono = intent.getStringExtra("Telefono");
 
         String datos = "Cédula: " + cedula +
                 "\nNombres: " + nombres +
@@ -33,7 +33,7 @@ public class DatosIngresadosActivity extends AppCompatActivity {
                 "\nCiudad: " + ciudad +
                 "\nGénero: " + genero +
                 "\nCorreo: " + correo +
-                "\nTeléfono: " + telefono;
+                "\nTeléfono: " + telefono +"\n USUARIO CREADO EXITOSAMENTE ";
 
         tvDatos.setText(datos);
     }
