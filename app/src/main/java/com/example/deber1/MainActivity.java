@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         String ciudad = txtCiudad.getText().toString();
         String genero = obtenerGeneroSeleccionado();
         String correo = txtCorreo.getText().toString();
-        String telefono = txtCiudad.getText().toString();
+        String telefono = txtTelefono.getText().toString();
 
         Intent intent = new Intent(MainActivity.this, DatosIngresadosActivity.class);
         intent.putExtra("cedula", cedula);
